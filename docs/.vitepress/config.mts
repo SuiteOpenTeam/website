@@ -17,13 +17,13 @@ export default defineConfigWithTheme({
     nav: [ // note: 增加 desc 
       { text: '产品',
        items: [
-          { text: 'SuiteBoot 开源版', link: projectUrl, desc: '支持单机和集群模式，一键部署' },
+          { text: 'SuiteBoot 开源版', link: projectUrl, desc: '支持单机和集群模式，一键部署', noIcon: true },
           // { text: 'SuiteCloud', link: projectUrl, desc: '全托管云服务 7x24 官方支持' },
         ] 
       },
       { text: '解决方案',
         items: [
-          { text: '仓库管理系统WMS', link: 'http://144.24.22.126/wms', desc: '出入库，进销存' },
+          { text: '仓库管理系统WMS', link: 'http://144.24.22.126/wms', desc: '出入库，进销存', noIcon: true },
           // { text: 'CRM系统', link: '/', desc: '销售线索，订单追踪，人员管理' },
           // { text: '报表系统', link: '/', desc: '自定义视图，更灵活的报表' },
         ] 
@@ -32,8 +32,8 @@ export default defineConfigWithTheme({
         text: '入门指南',
         items: [
           //{ text: '快速上手', link: 'https://suiteopenteam.github.io/docs/', noIcon: true },
-          { text: '官方文档', link: 'https://suiteopenteam.github.io/docs/' },
-          { text: '源码下载', link:  projectUrl },
+          { text: '官方文档', link: 'https://suiteopenteam.github.io/docs/', noIcon: true },
+          { text: '源码下载', link:  projectUrl, noIcon: true },
         ]
       },
       { text: '关于我们', link: projectUrl, noIcon: true }

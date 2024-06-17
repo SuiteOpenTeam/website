@@ -18,6 +18,7 @@ const { page } = useData()
       :href="item.link"
       :target="item.target"
       :rel="item.rel"
+      :noIcon="item.noIcon"
     >
     <li class="inline-block">
       <p class="title" v-html="item.text"></p>
