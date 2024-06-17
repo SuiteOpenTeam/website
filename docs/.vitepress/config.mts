@@ -1,5 +1,8 @@
 import { defineConfigWithTheme } from 'vitepress'
 
+const projectUrl = 'https://github.com/SuiteOpenTeam'; 
+const serviceMail = 'service@suiteboot.cn';
+
 // https://vitepress.dev/reference/site-config
 export default defineConfigWithTheme({
   title: "SUITEBOOT ",
@@ -14,32 +17,32 @@ export default defineConfigWithTheme({
     nav: [ // note: 增加 desc 
       { text: '产品',
        items: [
-          { text: 'SuiteBoot 开源版', link: '/api-examples', desc: '支持单机和集群模式，一键部署' },
-          { text: 'SuiteCloud', link: '/markdown-examples', desc: '全托管云服务 7x24 官方支持' },
+          { text: 'SuiteBoot 开源版', link: projectUrl, desc: '支持单机和集群模式，一键部署' },
+          // { text: 'SuiteCloud', link: projectUrl, desc: '全托管云服务 7x24 官方支持' },
         ] 
       },
       { text: '解决方案',
         items: [
-          { text: '仓库管理系统WMS', link: '/a', desc: '出入库，进销存' },
-          { text: 'CRM系统', link: '/b', desc: '销售线索，订单追踪，人员管理' },
-          { text: '报表系统', link: '/b', desc: '自定义视图，更灵活的报表' },
+          { text: '仓库管理系统WMS', link: 'http://144.24.22.126/wms', desc: '出入库，进销存' },
+          // { text: 'CRM系统', link: '/', desc: '销售线索，订单追踪，人员管理' },
+          // { text: '报表系统', link: '/', desc: '自定义视图，更灵活的报表' },
         ] 
       },
       {
         text: '入门指南',
         items: [
-          { text: '快速上手', link: 'https://github.com/', noIcon: true },
-          { text: '官方文档', link: 'https://github.com/' },
-          { text: '源码下载', link:  'https://github.com/' },
+          //{ text: '快速上手', link: 'https://suiteopenteam.github.io/docs/', noIcon: true },
+          { text: '官方文档', link: 'https://suiteopenteam.github.io/docs/' },
+          { text: '源码下载', link:  projectUrl },
         ]
       },
-      { text: '关于我们', link: '/cc' }
+      { text: '关于我们', link: projectUrl, noIcon: true }
     ],
     socialLinks: [ // note: text 优先
-      { text: '联系我们', link: '/concat' }
+      { text: '联系我们', link: 'mailto:'+serviceMail }
     ],
     footer: {
-      copyright: '©2024 云管易(北京)技术咨询有限公司 <a class="icp" href="https://beian.miit.gov.cn/" target="_blank" data-v-6370503a="">京ICP备2028042号</a>',
+      copyright: '©2024 云管易(北京)科技有限公司 ', // <a class="icp" href="https://beian.miit.gov.cn/" target="_blank" data-v-6370503a="">京ICP备xxxx号</a>
     },
     // 页面配置 首页
     index: {
@@ -47,7 +50,7 @@ export default defineConfigWithTheme({
       slogn: '开启数字想象力, 共创未来',
       desc: '帮助开发人员解决70%的重复工作，让开发更多关注业务，既能快速提高效率，节省研发成本，同时又不失灵活性！',
       btnText: '快速体验',
-      btnLink: '/',
+      btnLink: 'http://144.24.22.126/wms',
       features: {
         title: 'SuiteBoot特点',
         desc: '更灵活, 更快, 更全面',
@@ -73,8 +76,8 @@ export default defineConfigWithTheme({
       concat: {
         title: '加入我们的社区',
         desc: '获取最新更新，并于官方开发者和其他用户讨论。', 
-        github: { title: '加入我们的开发者社区', desc: 'SuiteBoot 已开源。欢迎关注我们的GitHub！', link: 'https://github.com/SuiteOpenTeam' },
-        join: { title: '联系我们', desc: '发送邮件到service@suiteboot.cn，及时获取最新反馈。', link: 'mailto:service@suiteboot.cn' },
+        github: { title: '加入我们的开发者社区', desc: 'SuiteBoot 已开源。欢迎关注我们的GitHub！', link: projectUrl },
+        join: { title: '联系我们', desc: '发送邮件到'+serviceMail+'，及时获取最新反馈。', link: 'mailto:'+serviceMail },
       }
     },
     
