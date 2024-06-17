@@ -46,15 +46,17 @@ export default defineConfigWithTheme({
       title: '低&零代码开发平台',
       slogn: '开启数字想象力, 共创未来',
       desc: '帮助开发人员解决70%的重复工作，让开发更多关注业务，既能快速提高效率，节省研发成本，同时又不失灵活性！',
+      btnText: '快速体验',
+      btnLink: '/',
       features: {
         title: 'SuiteBoot特点',
         desc: '更灵活, 更快, 更全面',
         btnText: '更多',
         items: [  // 4个
-            { title: '灵活性', desc: '自定义对象, 表单, 视图, 按钮, 转换关系, 支持20+字段类型, 自由控制全流程数据' },
-            { title: '性能', desc: '用 Java 编写，可持续、更安全、高性能，存储成本超低。' },
-            { title: '全面性', desc: '完善的权限管理，操作与数据权限自由配置' },
-            { title: '可扩展', desc: '利用解耦的架构，轻松独立地扩展前后端每个模块。' },
+            { title: '灵活性', desc: '自定义对象, 表单, 视图, 按钮, 转换关系, 支持20+字段类型, 自由控制全流程数据', icon:'/assets/rocket.svg' },
+            { title: '性能', desc: '用 Java 编写，可持续、更安全、高性能，存储成本超低。', icon: '/assets/hot.svg' },
+            { title: '全面性', desc: '完善的权限管理，操作与数据权限自由配置', icon: '/assets/subtree.svg' },
+            { title: '可扩展', desc: '利用解耦的架构，轻松独立地扩展前后端每个模块。', icon: '/assets/cpu.svg' },
         ]
       },
       clouds: {
@@ -67,6 +69,12 @@ export default defineConfigWithTheme({
             { title: '无服务器可扩展', desc: '专注于你的数据，根据数据接收率和查询来分配容量，而不是 CPU 或内存资源。'},
             { title: '开箱即用', desc: '秒速启用，无需任何配置。内置查询控制台、仪表盘和数据库接口更快使用。' }
         ]
+      },
+      concat: {
+        title: '加入我们的社区',
+        desc: '获取最新更新，并于官方开发者和其他用户讨论。', 
+        github: { title: '加入我们的开发者社区', desc: 'SuiteBoot 已开源。欢迎关注我们的GitHub！', link: 'https://github.com/SuiteOpenTeam' },
+        join: { title: '联系我们', desc: '发送邮件到service@suiteboot.cn，及时获取最新反馈。', link: 'mailto:service@suiteboot.cn' },
       }
     },
     

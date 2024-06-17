@@ -13,6 +13,9 @@ title:  低代码 零代码 开发平台，易用，全面，可拓展，安全�
            <div class="desc">
               {{ data.desc }}
            </div>
+           <div class="btns">
+               <a class="btn colorful2" target="_blank" :href="data.btnLink">{{ data.btnText }}</a>
+           </div>
         </div>
     </div>
 </div>
@@ -23,6 +26,7 @@ title:  低代码 零代码 开发平台，易用，全面，可拓展，安全�
             <div class="subTitle">{{ features.desc }}</div>
             <div class="columns">
                 <div class="column" v-for="item in features.items">
+                   <img :src="item.icon" />
                    <div class="item-title">{{ item.title }}</div>
                    <div class="desc">{{ item.desc }}</div>
                 </div>
@@ -37,24 +41,24 @@ title:  低代码 零代码 开发平台，易用，全面，可拓展，安全�
             <div class="columns">
                 <div class="column" v-for="item in clouds.items">
                    <div class="item-title">{{ item.title }}</div>
-                   <div class="desc">{{ clouds.desc }}</div>
+                   <div class="desc">{{ item.desc }}</div>
                 </div>
             </div>
-            <a class="btn">{{ clouds.btnText }}</a>
+            <a class="btn" >{{ clouds.btnText }}</a>
         </div>
     </div>
     <div class="feature join">
         <div class="inner-content">
-            <h2 class="title title-h2">加入我们的社区 </h2>
-            <div class="subTitle">获取最新更新，并于官方开发者和其他用户讨论。</div>
+            <h2 class="title title-h2">{{ concat.title }} </h2>
+            <div class="subTitle">{{ concat.desc }}</div>
             <div class="blocks">
-               <a class="block develop">
-                  <h3 class="title3">加入我们的开发者社区</h3>
-                  <div class="desc">SuiteBoot 已开源。欢迎关注我们的GitHub！</div>
+               <a class="block develop" :href="concat.github.link" target="_blank">
+                  <h3 class="title3">{{ concat.github.title }}</h3>
+                  <div class="desc">{{ concat.github.desc }}</div>
                </a>
-               <a class="block bg-2">
-                  <h3 class="title3">联系我们</h3>
-                  <div class="desc">发送邮件到service@suiteboot.cn，及时获取最新反馈。</div>
+               <a class="block bg-2" :href="concat.join.link" target="_blank">
+                  <h3 class="title3">{{ concat.join.title }}</h3>
+                  <div class="desc">{{ concat.join.desc }}</div>
                </a>
             </div>
         </div>
@@ -66,7 +70,7 @@ title:  低代码 零代码 开发平台，易用，全面，可拓展，安全�
 
     const { theme } = useData();
     const data = theme.value.index;
-    const { features, clouds } = data;
+    const { features, clouds, concat } = data;
     
 </script>
 
@@ -77,7 +81,7 @@ title:  低代码 零代码 开发平台，易用，全面，可拓展，安全�
         overflow: hidden;
         width: 100%;
         padding-top: 80px;
-        padding-bottom: 80px;
+        padding-bottom: 50px;
         justify-content: center;
         background: linear-gradient(180deg, rgba(30, 27, 33, .8) 0%, rgba(30, 27, 33, 0) 10%, rgba(30, 27, 33, 0) 81%, rgba(30, 27, 33, .95) 100%);
     }
@@ -113,6 +117,7 @@ title:  低代码 零代码 开发平台，易用，全面，可拓展，安全�
         line-height: 28px;
         color: #bab9bc;
         text-align: center;
+        margin-bottom: 30px;
     }
     .product-content{
         flex-direction: column;
@@ -148,6 +153,7 @@ title:  低代码 零代码 开发平台，易用，全面，可拓展，安全�
     }
     .product-content .feature .columns .column {
         padding: 32px 0;
+        padding-top: 10px;
     }
     .column .item-title{
         font-size: 20px;
@@ -192,6 +198,18 @@ title:  低代码 零代码 开发平台，易用，全面，可拓展，安全�
         background-image: linear-gradient(#1e1b21, #1e1b21), linear-gradient(307deg, #fc29a1, #751ee4);
         background-origin: border-box;
         background-clip: content-box, border-box;
+    }
+    .colorful-btn:hover{
+        background: linear-gradient(135deg, #751ee4 0%, #fc29a1 100%);
+        border: none;
+    }
+    .colorful2{
+        background: linear-gradient(135deg, #751ee4 0%, #fc29a1 100%);
+        border: none;
+        border-radius: 4px;
+    }
+    .colorful2:hover{
+        opacity: 0.8;
     }
     .product-content .cloud {
         padding-bottom: 80px;
@@ -245,7 +263,7 @@ title:  低代码 零代码 开发平台，易用，全面，可拓展，安全�
         margin-bottom: 15px;
     }
     .bg-2{
-        background: #6e77af;
+        background: #8322ff;
     }
 
 </style>
