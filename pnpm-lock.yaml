@@ -4,12 +4,10 @@ specifiers:
   '@vueuse/core': ^10.11.0
   vitepress: ^1.2.3
   vue: ^3.4.27
-  vue3typed: ^0.1.5
 
 dependencies:
   '@vueuse/core': registry.npmmirror.com/@vueuse/core/10.11.0_vue@3.4.27
   vue: registry.npmmirror.com/vue/3.4.27
-  vue3typed: registry.npmmirror.com/vue3typed/0.1.5
 
 devDependencies:
   vitepress: registry.npmmirror.com/vitepress/1.2.3
@@ -1027,13 +1025,6 @@ packages:
       '@algolia/transporter': registry.npmmirror.com/@algolia/transporter/4.23.3
     dev: true
 
-  registry.npmmirror.com/core-js/3.37.1:
-    resolution: {integrity: sha512-Xn6qmxrQZyB0FFY8E3bgRXei3lWDJHhvI+u0q9TKIYM49G8pAr0FgnnrFRAmsbptZL1yxRADVXn+x5AGsbBfyw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/core-js/-/core-js-3.37.1.tgz}
-    name: core-js
-    version: 3.37.1
-    requiresBuild: true
-    dev: false
-
   registry.npmmirror.com/csstype/3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/csstype/-/csstype-3.1.3.tgz}
     name: csstype
@@ -1233,12 +1224,6 @@ packages:
     version: 2.0.0
     engines: {node: '>=4'}
 
-  registry.npmmirror.com/typed.js/2.1.0:
-    resolution: {integrity: sha512-bDuXEf7YcaKN4g08NMTUM6G90XU25CK3bh6U0THC/Mod/QPKlEt9g/EjvbYB8x2Qwr2p6J6I3NrsoYaVnY6wsQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/typed.js/-/typed.js-2.1.0.tgz}
-    name: typed.js
-    version: 2.1.0
-    dev: false
-
   registry.npmmirror.com/vite/5.2.13:
     resolution: {integrity: sha512-SSq1noJfY9pR3I1TUENL3rQYDQCFqgD+lM6fTRAM8Nv6Lsg5hDLaXkjETVeBt+7vZBCMoibD+6IWnT2mJ+Zb/A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-5.2.13.tgz}
     name: vite
@@ -1366,15 +1351,3 @@ packages:
       '@vue/runtime-dom': registry.npmmirror.com/@vue/runtime-dom/3.4.27
       '@vue/server-renderer': registry.npmmirror.com/@vue/server-renderer/3.4.27_vue@3.4.27
       '@vue/shared': registry.npmmirror.com/@vue/shared/3.4.27
-
-  registry.npmmirror.com/vue3typed/0.1.5:
-    resolution: {integrity: sha512-hJ20Nvuze8uYlAwJj9Q3vCYxQ03ePvyvLIl01XdhIQzyuP0eqPd9n7/9w872LE1skRVC/n4l/YTAnSmymImtpw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue3typed/-/vue3typed-0.1.5.tgz}
-    name: vue3typed
-    version: 0.1.5
-    dependencies:
-      core-js: registry.npmmirror.com/core-js/3.37.1
-      typed.js: registry.npmmirror.com/typed.js/2.1.0
-      vue: registry.npmmirror.com/vue/3.4.27
-    transitivePeerDependencies:
-      - typescript
-    dev: false

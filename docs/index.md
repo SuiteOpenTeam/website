@@ -6,9 +6,7 @@ title:  低代码 零代码 开发平台，易用，全面，可拓展，安全�
         <div class="info">
            <div class="title-h1">
                <h1><strong>{{ data.title }}</strong></h1>
-               <vuetyped :strings="[data.slogn]" :showCursor="true" :typeSpeed="200">
-                  <h1 class="typing"></h1>
-               </vuetyped>
+                <h1 class="typing">{{ typedText }}</h1>
            </div>
            <div class="desc">
               {{ data.desc }}
@@ -67,10 +65,23 @@ title:  低代码 零代码 开发平台，易用，全面，可拓展，安全�
 
 <script setup>
     import { useData } from 'vitepress';
+    import { ref } from 'vue';
 
     const { theme } = useData();
     const data = theme.value.index;
     const { features, clouds, concat } = data;
+
+    const typedText = ref('');
+    var index = 0;
+    const type = () => {
+        if (index < data.slogn.length) {
+            typedText.value += data.slogn[index++];
+        } else {
+            clearInterval(intervalId);
+        }
+    };
+    
+    const intervalId = setInterval(type, 250);
     
 </script>
 
