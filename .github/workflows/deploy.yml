@@ -37,7 +37,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
-      - run: pnpm install
+      - run: pnpm install --no-frozen-lockfile
       - run: pnpm run docs:build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
