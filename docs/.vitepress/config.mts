@@ -9,6 +9,7 @@ export default defineConfigWithTheme({
   // titleTemplate: 'SUITEBOOT',
   description: "低代码 零代码 开发平台",
   appearance: 'force-dark',
+  base: '/website/',
   head: [['link', { rel: 'icon', href: '/logo.svg' }]],
   themeConfig: {
     logo: '/logo.svg',
