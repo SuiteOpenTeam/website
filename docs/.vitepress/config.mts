@@ -2,6 +2,7 @@ import { defineConfigWithTheme } from 'vitepress'
 
 const projectUrl = 'https://github.com/SuiteOpenTeam'; 
 const serviceMail = 'service@suiteboot.cn';
+const base = '/website/'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfigWithTheme({
@@ -9,8 +10,8 @@ export default defineConfigWithTheme({
   // titleTemplate: 'SUITEBOOT',
   description: "低代码 零代码 开发平台",
   appearance: 'force-dark',
-  base: '/website/',
-  head: [['link', { rel: 'icon', href: '/logo.svg' }]],
+  base: base,
+  head: [['link', { rel: 'icon', href: base+'logo.svg' }]],
   themeConfig: {
     logo: '/logo.svg',
     logoLink: '/',
@@ -57,10 +58,10 @@ export default defineConfigWithTheme({
         desc: '更灵活, 更快, 更全面',
         btnText: '更多',
         items: [  // 4个
-            { title: '灵活性', desc: '自定义对象, 表单, 视图, 按钮, 转换关系, 支持20+字段类型, 自由控制全流程数据', icon:'/assets/rocket.svg' },
-            { title: '性能', desc: '用 Java 编写，可持续、更安全、高性能，存储成本超低。', icon: '/assets/hot.svg' },
-            { title: '全面性', desc: '完善的权限管理，操作与数据权限自由配置', icon: '/assets/subtree.svg' },
-            { title: '可扩展', desc: '利用解耦的架构，轻松独立地扩展前后端每个模块。', icon: '/assets/cpu.svg' },
+            { title: '灵活性', desc: '自定义对象, 表单, 视图, 按钮, 转换关系, 支持20+字段类型, 自由控制全流程数据', icon:base+'assets/rocket.svg' },
+            { title: '性能', desc: '用 Java 编写，可持续、更安全、高性能，存储成本超低。', icon: base+'assets/hot.svg' },
+            { title: '全面性', desc: '完善的权限管理，操作与数据权限自由配置', icon: base+'assets/subtree.svg' },
+            { title: '可扩展', desc: '利用解耦的架构，轻松独立地扩展前后端每个模块。', icon: base+'assets/cpu.svg' },
         ]
       },
       clouds: {
